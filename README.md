@@ -1,8 +1,32 @@
 
 
-## [Infinigen: Infinite Photorealistic Worlds using Procedural Generation](https://infinigen.org)
+## Infinigen (Fork)
 
-Please visit our website, [https://infinigen.org](https://infinigen.org)
+This project is a fork of [Infinigen: Infinite Photorealistic Worlds using Procedural Generation](https://github.com/princeton-vl/infinigen), an open-source research project developed by researchers at Princeton University.
+
+This fork aims to extend Infinigen with the additional feature of generating singular assets for research purposes. These changes are to experiment with utilizing synthetic data for training computer vision models.
+
+### Changes in this Fork:
+- New file called `generate_two_assets.py` that generates 3 renders in total (3 renders, 2 assets)
+- Two of these renders contain the same asset but at different camera angles
+- The third render is a completely different asset
+- The seed of the second/unique asset is +1 of the seed of the first object
+
+### Getting Started
+To run this file, follow the original [Installation Instructions](docs/Installation.md) for the **Python Module (default option)**. Then, use the following template in the command prompt to run the file:
+```
+python -m infinigen_examples.generate_two_assets -f {FactoryName} -n 2 --save_blend --initial-seed {seed}
+```
+
+For example, if you wanted to run this command for Pinecones with a seed of 500, it would look something like this:
+```
+python -m infinigen_examples.generate_two_assets -f PineconeFactory -n 2 --save_blend --initial-seed 500
+```
+
+To view the original project, pelease visit [Infinigen's website](https://infinigen.org) <br>
+Below is the original README.md
+
+---
 
 [![Infinigen Intro Video](docs/images/video_thumbnail.png)](https://youtu.be/6tgspeI-GHY)
 
